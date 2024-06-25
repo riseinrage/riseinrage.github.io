@@ -4,7 +4,7 @@
 <title>Rise in Rage</title>
 <style>
     body {
-        color: #ffffff;
+        color: #000000;
     }
 #video-background {
   position: fixed; 
@@ -29,21 +29,42 @@
   display: flex; /* Enable flexbox */
   flex-direction: column; /* Arrange items vertically */
   align-items: center; /* Center items horizontallyexpand_more */
+  gap: 80px;
 }
 
 img.logo {
-    max-width: 50%; /* Limits width to 1/2 of the viewport */
-    width: 100%; /* Allows the image to expand to full width if needed */
+    max-width: 66.6%; /* Limits width to ~1/2 of the viewport */
+    width: 90%; /* Allows the image to expand to full width if needed */
     height: auto; /* Maintains aspect ratio by adjusting height automatically */
+}
+
+.links-container {
+  display: flex; /* Enable flexbox */
+  flex-direction: row; /* Arrange items horizontally by default */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 40px 60px;
+}
+
+.link-block {
+  width: 30%; /* Adjust width as needed */
+  margin: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 a {
     color: #ffffff;
-    font-weight: normal;
     text-decoration: underline; /* Make sure the underline is applied */
     text-underline-offset: 7px;  /* Adjust the offset value as needed */
-    padding: 0 15px;
-    font-size: 1.1em;
+    font-size: 1.75em;
+    font-weight: 450;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .links-container {
+    flex-direction: column; /* Stack items vertically on smaller screensexpand_more */
+  }
 }
 
 /* Media query for narrower screens */
@@ -58,16 +79,14 @@ a {
   <video id="video-background" autoplay muted loop playsinline poster="kryly-bg-placeholder.jpg">
          <source src="video/kryly-canvas.mp4" type="video/mp4">
          <source src="video/kryly-canvas.webm" type="video/webm">
-         Your browser does not support the video tag.
      </video>
   <div class="align-center container">
     <img class="logo" src="image/rir-logo.png">
-    <br> <br>
-    <h2>
-        <a href="https://riseinrage.bandcamp.com" target="_blank">Music</a>
-        <a href="https://youtube.com/c/riseinrage" target="_blank">Video</a>
-        <a href="https://linktr.ee/riseinrage" target="_blank">Links<a>
-    </h2>
+    <div class="links-container">
+      <div class=".link-block"><a href="https://riseinrage.bandcamp.com" target="_blank">Music</a></div>
+      <div class=".link-block"><a href="https://www.youtube.com/playlist?list=PLVOoyUlgJpsxaKO1Pn78ICzxP-2zeyeW7" target="_blank">Video</a></div>
+      <div class=".link-block"><a href="https://linktr.ee/riseinrage" target="_blank">Links<a></div>
+    </div>
   </div>
 </body>
 </html>

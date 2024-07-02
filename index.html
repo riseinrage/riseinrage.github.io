@@ -65,13 +65,16 @@
       @media (max-width: 1000px) {
         .links-container {
           flex-direction: column; /* Stack items vertically on smaller screens */
+          gap: 60px;
         }
-      }
-
-      /* Media query for narrower screens */
-      @media (max-width: 1000px) {
+      
         img.logo {
           max-width: 100%;
+        }
+        
+        a {
+          font-size: 2.5em;
+          text-underline-offset: 14px; /* Adjust the offset value as needed */
         }
       }
     </style>

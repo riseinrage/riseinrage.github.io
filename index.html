@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Rise in Rage</title>
-<style>
-    body {
+  <head>
+    <title>Rise in Rage</title>
+    <style>
+      body {
         color: #000000;
-    }
-#video-background {
-  position: fixed; 
-  right: 0; 
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire viewport */
-  z-index: -1;  /* Ensure video is behind other content */
-  filter: blur(10px); /* Adjust blur intensity */
-  filter: brightness(0.3); /* Darken the video (0-1 range) */
-}
+      }
+      #video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video covers the entire viewport */
+        z-index: -1; /* Ensure video is behind other content */
+        filter: blur(10px); /* Adjust blur intensity */
+        filter: brightness(0.3); /* Darken the video (0-1 range) */
+      }
 
-.align-center {
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    min-height: 100vh; /* Ensures the container takes up full viewport height */
-}
+      .align-center {
+        display: flex;
+        justify-content: center; /* Centers content horizontally */
+        align-items: center; /* Centers content vertically */
+        min-height: 100vh; /* Ensures the container takes up full viewport height */
+      }
 
-.container {
-  display: flex; /* Enable flexbox */
-  flex-direction: column; /* Arrange items vertically */
-  align-items: center; /* Center items horizontallyexpand_more */
-  gap: 80px;
-}
+      .container {
+        display: flex; /* Enable flexbox */
+        flex-direction: column; /* Arrange items vertically */
+        align-items: center; /* Center items horizontallyexpand_more */
+        gap: 80px;
+      }
 
-img.logo {
-    max-width: 66.6%; /* Limits width to ~1/2 of the viewport */
-    width: 90%; /* Allows the image to expand to full width if needed */
-    height: auto; /* Maintains aspect ratio by adjusting height automatically */
-}
+      img.logo {
+        max-width: 66.6%; /* Limits width to ~1/2 of the viewport */
+        width: 90%; /* Allows the image to expand to full width if needed */
+        height: auto; /* Maintains aspect ratio by adjusting height automatically */
+      }
 
-.links-container {
-  display: flex; /* Enable flexbox */
-  flex-direction: row; /* Arrange items horizontally by default */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  gap: 40px 60px;
-}
+      .links-container {
+        display: flex; /* Enable flexbox */
+        flex-direction: row; /* Arrange items horizontally by default */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        gap: 40px 60px;
+      }
 
-.link-block {
-  width: 30%; /* Adjust width as needed */
-  margin: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+      .link-block {
+        width: 30%; /* Adjust width as needed */
+        margin: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
 
-a {
-    color: #ffffff;
-    text-decoration: underline; /* Make sure the underline is applied */
-    text-underline-offset: 7px;  /* Adjust the offset value as needed */
-    font-size: 1.75em;
-    font-weight: 450;
-}
+      a {
+        color: #ffffff;
+        text-decoration: underline; /* Make sure the underline is applied */
+        text-underline-offset: 7px; /* Adjust the offset value as needed */
+        font-size: 1.75em;
+        font-weight: 450;
+      }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .links-container {
-    flex-direction: column; /* Stack items vertically on smaller screensexpand_more */
-  }
-}
+      /* Media query for smaller screens */
+      @media (max-width: 1000px) {
+        .links-container {
+          flex-direction: column; /* Stack items vertically on smaller screens */
+        }
+      }
 
-/* Media query for narrower screens */
-@media (max-width: 1000px) { /* Adjust 600px as needed */
-    img.logo {
-        max-width: 100%;
-    }
-}
-</style>
-</head>
-<body>
-  <video id="video-background" autoplay muted loop playsinline poster="kryly-bg-placeholder.jpg">
-         <source src="video/kryly-canvas.mp4" type="video/mp4">
-         <source src="video/kryly-canvas.webm" type="video/webm">
-     </video>
-  <div class="align-center container">
-    <img class="logo" src="image/rir-logo.png">
-    <div class="links-container">
-      <div class=".link-block"><a href="https://riseinrage.bandcamp.com" target="_blank">Music</a></div>
-      <div class=".link-block"><a href="https://www.youtube.com/playlist?list=PLVOoyUlgJpsxaKO1Pn78ICzxP-2zeyeW7" target="_blank">Video</a></div>
-      <div class=".link-block"><a href="https://linktr.ee/riseinrage" target="_blank">Links<a></div>
+      /* Media query for narrower screens */
+      @media (max-width: 1000px) {
+        img.logo {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <video id="video-background" autoplay muted loop playsinline poster="kryly-bg-placeholder.jpg">
+      <source src="video/kryly-canvas.mp4" type="video/mp4" />
+      <source src="video/kryly-canvas.webm" type="video/webm" />
+    </video>
+    <div class="align-center container">
+      <img class="logo" src="image/rir-logo.png" />
+      <div class="links-container">
+        <div class=".link-block"><a href="https://riseinrage.bandcamp.com/music" target="_blank">Music</a></div>
+        <div class=".link-block"><a href="https://www.youtube.com/playlist?list=PLVOoyUlgJpsxaKO1Pn78ICzxP-2zeyeW7" target="_blank">Video</a></div>
+        <div class=".link-block"><a href="https://linktr.ee/riseinrage" target="_blank">Links</a></div>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
